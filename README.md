@@ -1,66 +1,181 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# 📚 API REST de Libros
 
-## About Laravel
+### API desarrollada con Laravel para la gestión y consulta de libros
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-Framework-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![REST API](https://img.shields.io/badge/REST-API-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+</div>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 📋 Descripción del Proyecto
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**API REST de Libros** es una aplicación backend desarrollada con **Laravel** que expone endpoints para gestionar un catálogo de libros. Permite realizar operaciones CRUD completas (Crear, Leer, Actualizar y Eliminar) sobre los recursos a través de peticiones HTTP con respuestas en formato **JSON**.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Este proyecto es ideal para aprender cómo construir APIs RESTful con Laravel siguiendo buenas prácticas de desarrollo backend.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## ✨ Funcionalidades
 
-### Premium Partners
+- 📖 **Listar** todos los libros disponibles
+- 🔍 **Consultar** el detalle de un libro por su ID
+- ➕ **Crear** nuevos registros de libros
+- ✏️ **Actualizar** la información de un libro existente
+- 🗑️ **Eliminar** un libro del sistema
+- 📦 Respuestas en formato **JSON**
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+---
 
-## Contributing
+## 🛠️ Tecnologías Utilizadas
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Tecnología | Descripción |
+|---|---|
+| **Laravel** | Framework PHP para el desarrollo de la API |
+| **PHP** | Lenguaje de backend (84.2%) |
+| **Blade** | Motor de plantillas (15.1%) |
+| **MySQL** | Base de datos relacional |
+| **Eloquent ORM** | Manejo de modelos y consultas a la BD |
+| **Composer** | Gestor de dependencias PHP |
+| **Laravel Mix** | Compilación de assets |
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 📁 Estructura del Proyecto
 
-## Security Vulnerabilities
+```
+LaravelApiDeLibros/
+├── app/
+│   ├── Http/
+│   │   └── Controllers/    # Controladores de la API
+│   └── Models/             # Modelos Eloquent
+├── database/
+│   └── migrations/         # Migraciones de la BD
+├── routes/
+│   └── api.php             # Definición de endpoints de la API
+├── config/                 # Configuración del proyecto
+├── .env.example            # Variables de entorno de ejemplo
+├── composer.json           # Dependencias PHP
+└── artisan                 # CLI de Laravel
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 🚀 Instalación y Configuración
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/CorinaHancco/LaravelApiDeLibros.git
+cd LaravelApiDeLibros
+```
+
+### 2. Instalar dependencias
+
+```bash
+composer install
+```
+
+### 3. Configurar el entorno
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+### 4. Configurar la base de datos en `.env`
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=libros_db
+DB_USERNAME=tu_usuario
+DB_PASSWORD=tu_contraseña
+```
+
+### 5. Ejecutar migraciones
+
+```bash
+php artisan migrate
+```
+
+### 6. Iniciar el servidor
+
+```bash
+php artisan serve
+```
+
+La API estará disponible en: **http://localhost:8000/api**
+
+---
+
+## 🗂️ Endpoints de la API
+
+Todos los endpoints devuelven respuestas en formato `application/json`.
+
+| Método | Endpoint | Descripción |
+|---|---|---|
+| `GET` | `/api/libros` | Obtener todos los libros |
+| `GET` | `/api/libros/{id}` | Obtener un libro por ID |
+| `POST` | `/api/libros` | Crear un nuevo libro |
+| `PUT` | `/api/libros/{id}` | Actualizar un libro |
+| `DELETE` | `/api/libros/{id}` | Eliminar un libro |
+
+### Ejemplo de respuesta `GET /api/libros`
+
+```json
+[
+  {
+    "id": 1,
+    "titulo": "Cien años de soledad",
+    "autor": "Gabriel García Márquez",
+    "año": 1967,
+    "created_at": "2024-01-01T00:00:00Z"
+  }
+]
+```
+
+---
+
+## 🧪 Pruebas con Postman
+
+Puedes probar los endpoints importando las rutas en [Postman](https://www.postman.com/) o cualquier cliente HTTP como **Thunder Client** o **Insomnia**.
+
+Pasos básicos:
+1. Selecciona el método HTTP (GET, POST, PUT, DELETE)
+2. Ingresa la URL: `http://localhost:8000/api/libros`
+3. Para POST y PUT, envía el body en formato `JSON`
+
+---
+
+## 📚 Lo que se aprende con este proyecto
+
+- Construcción de **APIs RESTful** con Laravel
+- Uso de `Route::apiResource` para definir rutas de API
+- Respuestas estructuradas en **JSON**
+- **Eloquent ORM** para operaciones con la base de datos
+- Separación entre lógica de negocio y rutas
+- Buenas prácticas de desarrollo backend con PHP
+
+---
+
+## 👩‍💻 Autora
+
+**Corina Hancco** — [@CorinaHancco](https://github.com/CorinaHancco)
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia **MIT**. Puedes usarlo, modificarlo y distribuirlo libremente.
+
+---
+
+<div align="center">⭐ Si te fue útil, ¡dale una estrella al repo!</div>
